@@ -5,7 +5,7 @@ import { check, validationResult } from "express-validator";
 
 config();
 const sendEmailRouter = new Router();
-const key = "SG.bJ3AfsxiSSWukBBT1A1TAw.b5w-8RfiP3r4Os0Qwlbj85GKHN1z-pRxRPwBBZPwNss";
+const key = process.env.SENDGRID_APIKEY;
 client.setApiKey(key);
 
 sendEmailRouter.post(
