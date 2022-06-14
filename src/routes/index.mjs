@@ -4,6 +4,7 @@ import sendEmailRouter from "./sendEmail.routes.mjs";
 
 const router = new Router();
 
+router.get("/", (req, res) => res.send("good"));
 router.use("/contact", addListRouter);
 router.use("/email", sendEmailRouter);
 
