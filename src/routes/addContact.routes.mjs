@@ -59,9 +59,9 @@ addListRouter.post(
 			success: false,
 			message: "Bad request",
 			errors: errors.array(),
+			received: req.body,
 		});
 	}
 );
-
 
 export default addListRouter;
