@@ -20,8 +20,8 @@ sendEmailRouter.post(
 		const { email, username, description } = req.body;
 		if (errors.isEmpty()) {
 			const message = {
-				to: ["mikael@omnigo.ca", "rony@omnigo.ca"],
-				from: "bonjour@omnigo.ca",
+				to: ["email", "email"],
+				from: "email",
 				subject: "Nouveau formulaire de contact",
 				html: `
 				<p>Bonjour, ${username} demande à être contacter</p>
