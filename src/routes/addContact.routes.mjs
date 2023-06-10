@@ -5,8 +5,8 @@ import { check, validationResult } from "express-validator";
 
 config();
 const addListRouter = new Router();
-const key = process.env.SENDGRID_APIKEY;
-client.setApiKey(key);
+const {SENDGRID_APIKEY, LIST_ID} = process.env;
+client.setApiKey(SENDGRID_APIKEY);
 
 addListRouter.post(
 	"/add",
@@ -19,7 +19,7 @@ addListRouter.post(
 		if (errors.isEmpty()) {
 			const { email } = req.body;
 			const data = {
-				list_ids: ["4651deea-06e2-4b13-9ecd-af57c7ef3b25"],
+				list_ids: [LIST_ID],
 				contacts: [
 					{
 						email,
