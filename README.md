@@ -18,7 +18,7 @@ This project is a simple yet effective email sender using Node.js and SendGrid. 
 
 1. Clone this repository.
 2. Install the dependencies using `npm install`.
-3. Create a `.env` file in the root of your project and fill it with your SendGrid API key.
+3. Create a `.env` file in the root of your project and fill it with your SENDGRID_API_KEY and also the LIST_ID of the list you want to add contact to. Remember to replace the from and to emails by your actuals emails in the send email file.
 4. Start the server using `npm start`.
 5. You can now send a POST request to `http://localhost:<port>/contact/add` to add a new contact, or to `http://localhost:<port>/email/contactEmail` to send an email.
 
